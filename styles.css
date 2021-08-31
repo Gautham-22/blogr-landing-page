@@ -7,6 +7,12 @@ font-family: 'Ubuntu', sans-serif;
     --very-light-red: hsl(13, 100%, 72%);
     --light-red: hsl(353, 100%, 62%);
     --white: hsl(0, 0%, 100%);
+    --color-section-title: hsl(208, 49%, 24%);
+    --color-section-paragraph: hsl(207, 13%, 34%);
+    --dark-bg-gradient: hsl(237, 17%, 21%);
+    --desaturated-bg-gradient: hsl(237, 23%, 32%);
+    --color-footer-bg: hsl(240, 10%, 16%);
+    --color-footer-text: hsl(240, 2%, 79%);
 }
 
 * {
@@ -15,13 +21,32 @@ font-family: 'Ubuntu', sans-serif;
     box-sizing: border-box;
 }
 
-h1 {
-    margin: 0;
-}
-
 body {
     font-family: 'Overpass', sans-serif;
+    user-select: none;
+}
+
+h1 {
+    margin: 0;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+p {
     line-height: 1.6;
+    font-weight: 300;
+}
+
+ul {
+    list-style: none;
+}
+
+section, footer {
+    text-align: center;
+}
+
+section p {
+    line-height: 1.8;
 }
 
 button, #hamburger {
@@ -30,6 +55,11 @@ button, #hamburger {
 
 .hide {
     display: none;
+}
+
+.container {
+    width: min(100%,500px);
+    margin: 0 auto;
 }
 
 /* header styles */
@@ -54,14 +84,11 @@ header {
 
 #intro__section h1 {
     font-size: 2.3rem;
-    font-weight: 600;
-    line-height: 1.3;
 }
 
 #intro__section p {
     margin: 0.5em 0em 1.7em;
     font-size: 1.3rem;
-    font-weight: 300;
 }
 
 #intro__section button {
@@ -78,4 +105,106 @@ header {
 #intro__section button:last-child {
     background: transparent;
     color: var(--white);
+}
+
+/* section1 styles */
+
+#section1 {
+    margin: 5em 0em;
+    padding: 0em 1.5em;
+}
+
+#section1 div:nth-child(3) {  /* selecting center div & adding top, bottom margins */
+    margin: 3em 0em;
+}
+
+.section1__title, .section3__title {
+    margin-bottom: 0.5em;
+    font-size: 2rem;
+    color: var(--color-section-title);
+}
+
+#illustration-editor {
+    max-width: 100%;
+    margin-top: 1.3em;
+}
+
+#section1 p, #section3 p {
+    color: var(--color-section-paragraph);
+}
+
+/* section2 styles */
+
+#section2 {
+    margin: 10em 0em 4em;
+    padding: 3em 1.5em 5em;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    background: linear-gradient(to bottom,var(--dark-bg-gradient),var(--desaturated-bg-gradient));
+    color: var(--white);
+}
+
+#illustration-phones {
+    position: relative;
+    transform: translateY(-45%);
+    width: min(90%,400px);
+    margin-bottom: -125px;
+}
+
+.section2__title {
+    margin-bottom: 0.5em;
+    font-size: 2rem;
+}
+
+/* section3 styles */
+
+#section3 {
+    margin: 3.5em 0em;
+    padding: 0em 1.5em;
+}
+
+#section3 .container div:nth-child(2) {
+    margin: 2.3em 0em;
+}
+
+#illustration-laptop {
+    max-width: 100%;
+}
+
+/* footer styles */
+
+footer {
+    padding: 2.5em 1.5em;
+    border-top-right-radius: 100px;
+    background: var(--color-footer-bg);
+    color: var(--white);
+}
+
+.options {
+    margin-top: 1.1em;
+    color: var(--color-footer-text);
+}
+
+.options p {
+    margin: 0.5em 0em;
+}
+
+footer ul li:nth-child(1), footer ul li:nth-child(2) {
+    margin: 2.3em 0em;
+}
+
+@media (min-width: 450px) {
+    #section2 {
+        margin: 15em 0em 5em; 
+    }
+    #illustration-phones {
+        margin-bottom: -180px;
+    }
+}
+
+@media (min-width: 550px) {
+    #section1 p, #section2 p, #section3 p {
+        text-align: justify;
+        text-align-last: center;
+    }
 }
