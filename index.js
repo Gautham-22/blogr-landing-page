@@ -25,9 +25,9 @@ window.addEventListener("resize",() => {
 })
 
 function mobileLayout() {
-    illustrationEditor.src = "./images/illustration-editor-mobile.svg";  
+    // illustrationEditor.src = "./images/illustration-editor-mobile.svg";  
 } 
 
 function desktopLayout() {
-    illustrationEditor.src = "./images/illustration-editor-desktop.svg";  
+    // illustrationEditor.src = "./images/illustration-editor-desktop.svg";  
 } 
