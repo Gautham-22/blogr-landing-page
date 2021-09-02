@@ -148,7 +148,7 @@ header {
 #illustration-phones {
     position: relative;
     transform: translateY(-45%);
-    max-width: 90%;
+    max-width: 85%;
     margin-bottom: -135px;
     z-index: 1;
 }
@@ -214,17 +214,23 @@ footer ul li:nth-child(1), footer ul li:nth-child(2) {
 @media (min-width: 700px) {
     /* general styles */
     .container {
-        width: min(100%,1300px);
+        width: min(100%,1500px);
         margin: 0 auto;
     }
     /* header styles */
     header {
         background: url("./images/bg-pattern-intro.svg") left 30% bottom 47%/2000px no-repeat, linear-gradient(to bottom,var(--very-light-red),var(--light-red));
     }
-    /* section1 & section2 styles */
-    #section1 .row, #section2 .container div {
+    header .container {
+        width: min(100%,1300px);
+    }
+    /* section1, section2 & section3 styles */
+    #section1 .row, #section2 .container div, #section3 .row {
         max-width: 550px;
         margin: 0 auto;
+    }
+    #section3 {
+        margin: 5em 0em;
     }
     /* footer styles */
     footer {
@@ -258,19 +264,21 @@ footer ul li:nth-child(1), footer ul li:nth-child(2) {
         text-align: start;
     }
     #section1 p, #section2 p, #section3 p {
+        text-align: start;
         text-align-last: start;
     }
     /* section1 styles */
     #section1 {
-        margin-right: 0;
-        padding: 0em 0em 0em 2.5em;
-        background: url("./images/illustration-editor-mobile.svg") center right -10%/60% no-repeat;
+        padding: 0em 0em 0em 2.8em;
+    }
+    #section1 .container {
+        background: url("./images/illustration-editor-mobile.svg") top 60% right -10%/60% no-repeat;
     }
     #illustration-editor {
         display: none;
     }
     #section1 .row {
-        width: 40%;
+        width: 43%;
         margin: 0;
         margin-top: 2em;
     }
@@ -281,32 +289,57 @@ footer ul li:nth-child(1), footer ul li:nth-child(2) {
     #section2 {
         margin: 0;
         padding: 6em 2em;
-        position: relative;
         border-top-right-radius: 70px;
         border-bottom-left-radius: 70px;
         background: url("./images/bg-pattern-circles.svg") top -400px left -180px/800px no-repeat, linear-gradient(to bottom,var(--dark-bg-gradient),var(--desaturated-bg-gradient));
+    }
+    #section2 .container {
+        position: relative;
     }
     #illustration-phones {
         width: 400px;
         position: absolute;
         top: 50%;
-        left: 5%;
+        left: 0%;
         margin-bottom: 0px;
     }
     #section2 .container div {
         width: min(50%,550px);
         margin-right: 0em;
     }
+    /* section3 styles */
+    #section3 {
+        padding: 0em 3.5em 0em 0em;
+    }
+    #section3 .container {
+        background: url("./images/illustration-laptop-desktop.svg") center left -30%/60% no-repeat;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    #illustration-laptop {
+        display: none;
+    }
+    #section3 .row {
+        width: 40%;
+        margin: 3em 0em 0em;
+    }
 }
 
 @media (min-width: 1100px) {
     #section1 {
-        padding: 3em 0em 7em 3em;
-        background: url("./images/illustration-editor-desktop.svg") center right -10%/50% no-repeat;
+        margin: 3em 0em 6em;
+    }
+    #section1 .container{
+        padding: 3em 0em 4em 3em;
+        background: url("./images/illustration-editor-desktop.svg") center right 0%/50% no-repeat;
     }
     #section1 .row {
-        width: 45%;
-        margin: 6em 0em 0em 2em;
+        width: 44%;
+        margin-top: 6em;
+    }
+    #title-center {
+        margin-right: 2em;
     }
     #illustration-phones {
         width: 500px;
@@ -314,14 +347,31 @@ footer ul li:nth-child(1), footer ul li:nth-child(2) {
     #section2 .container div {
         margin-right: 1em;
     }
+    #section3 {
+        margin: 7em 0em;
+    }
+    #section3 .row {
+        margin: 5em 0em 0em;
+    }
+    #section3 .container {
+        padding: 3em 1em 3em 0em;
+        background: url("./images/illustration-laptop-desktop.svg") center left -200px/contain no-repeat;
+    }
 }
 
 @media (min-width: 1300px) {
-    #section1 {
-        padding: 7em 0em 15em 4em;
+    #section1 .container{
+        padding: 7em 0em 15em 6em;
         background: url("./images/illustration-editor-desktop.svg") center right -300px/contain no-repeat;
+    }
+    #title-center {
+        margin-right: 3em;
     }
     #section2 .container div {
         margin-right: 8em;
+    }
+    #section3 .container {
+        padding: 6em 9em 8em 0em;
+        background: url("./images/illustration-laptop-desktop.svg") center left -240px/contain no-repeat;
     }
 }
