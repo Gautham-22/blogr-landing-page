@@ -65,6 +65,7 @@ button, #hamburger {
 /* header styles */
 
 header {
+    position: relative;
     padding: 3em 1.2em;
     border-bottom-left-radius: 90px;
     background: url("./images/bg-pattern-intro.svg") left -400px bottom -550px/1500px no-repeat, linear-gradient(to bottom,var(--very-light-red),var(--light-red));
@@ -195,6 +196,70 @@ footer ul li:nth-child(1), footer ul li:nth-child(2) {
     margin: 2.3em 0em;
 }
 
+/* mobile navbar styles */ 
+header .mobile-nav {
+    width: min(90%,550px);
+    padding: 0em 1.5em;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 7px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-align: center;
+    background: var(--white);
+    color: hsl(237, 23%, 32%);
+    box-shadow: 0px 30px 30px -25px rgba(0,0,0,0.6);
+}
+
+header .mobile-nav ul:first-child {
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+header .mobile-nav li {
+    margin: 1.3em 0em;
+}
+
+.mobile-nav .select div {
+    margin: 0.9em 0em;
+    padding: 0.1em 0em;
+    background: rgba(0,0,0,0.05);
+}
+
+.mobile-nav .select div p {
+    margin: 1em 0em;
+}
+
+.select > p {
+    display: inline-block;
+    font-weight: 600;
+}
+
+.arrow {
+    margin-left: 0.5em;
+    cursor: pointer;
+}
+
+.select.active > p{
+    opacity: 0.75;
+}
+
+.select.active .arrow {
+    transform: rotate(180deg);
+}
+
+.mobile-nav #signup-container {
+    margin: 2.3em 0em;
+}
+
+.mobile-nav #signup {
+    padding: 1em 1.9em;
+    border-radius: 25px;
+    background: linear-gradient(to right,var(--very-light-red),var(--light-red));
+    color: var(--white);
+}
+
 @media (min-width: 450px) {
     #section2 {
         margin: 15em 0em 5em; 
@@ -239,9 +304,6 @@ footer ul li:nth-child(1), footer ul li:nth-child(2) {
     footer .container {
         display: flex;
         justify-content: space-around;
-    }
-    .logo {
-        width: 10%;
     }
     nav {
         width: 70%;
