@@ -13,6 +13,7 @@ font-family: 'Ubuntu', sans-serif;
     --desaturated-bg-gradient: hsl(237, 23%, 32%);
     --color-footer-bg: hsl(240, 10%, 16%);
     --color-footer-text: hsl(240, 2%, 79%);
+    --color-button-hover: hsl(355, 100%, 74%);
 }
 
 * {
@@ -24,6 +25,10 @@ font-family: 'Ubuntu', sans-serif;
 body {
     font-family: 'Overpass', sans-serif;
     user-select: none;
+}
+
+a {
+    cursor: pointer;
 }
 
 h1 {
@@ -76,6 +81,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0em 2em;
 }
 
 #intro__section {  /* intro part in header */
@@ -198,10 +204,10 @@ footer ul li:nth-child(1), footer ul li:nth-child(2) {
 
 /* mobile navbar styles */ 
 header .mobile-nav {
-    width: min(90%,550px);
+    width: min(90%,450px);
     padding: 0em 1.5em;
     position: absolute;
-    top: 20%;
+    top: 22%;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 7px;
@@ -209,7 +215,7 @@ header .mobile-nav {
     font-weight: 600;
     text-align: center;
     background: var(--white);
-    color: hsl(237, 23%, 32%);
+    color: var(--desaturated-bg-gradient);
     box-shadow: 0px 30px 30px -25px rgba(0,0,0,0.6);
 }
 
@@ -227,7 +233,7 @@ header .mobile-nav li {
     background: rgba(0,0,0,0.05);
 }
 
-.mobile-nav .select div p {
+.select div p {
     margin: 1em 0em;
 }
 
@@ -250,14 +256,93 @@ header .mobile-nav li {
 }
 
 .mobile-nav #signup-container {
-    margin: 2.3em 0em;
+    margin: 1.5em 0em;
+}
+
+#signup {
+    padding: 1em 1.9em;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
 }
 
 .mobile-nav #signup {
-    padding: 1em 1.9em;
-    border-radius: 25px;
     background: linear-gradient(to right,var(--very-light-red),var(--light-red));
     color: var(--white);
+}
+
+/* desktop nav styles */
+.desktop-nav {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.desktop-nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.desktop-nav ul li {
+    margin: 0em 1.5em;
+}
+
+.desktop-nav .select {
+    position: relative;
+}
+
+.desktop-nav .select div {
+    margin-top: 1em;
+    padding: 0.5em 2.5em 0.5em 1.5em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 6px;
+    background: var(--white);
+    color: var(--desaturated-bg-gradient);
+    box-shadow: 0px 30px 30px -25px rgba(0,0,0,0.6);
+}
+
+#options1 {
+    left: 40%;
+}
+
+.desktop-nav .select p {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.desktop-nav .select div p {
+    opacity: 0.7;
+}
+
+.desktop-nav .select div p:hover {
+    color: var(--dark-bg-gradient);
+    opacity: 1;
+}
+
+.desktop-nav .select > p:hover {
+    text-decoration: underline;
+}
+
+.desktop-nav #signup {
+    background: var(--white);
+    color: var(--light-red);
+    cursor: pointer;
+}
+
+/* button hover styles */
+
+#intro__section button:hover, .desktop-nav #signup:hover {
+    background: var(--color-button-hover);
+    color: var(--white);
+    border: 1px solid var(--color-button-hover);
+}
+
+#intro__section button:last-child:hover {
+    color: var(--color-button-hover);
+    background: var(--white);
 }
 
 @media (min-width: 450px) {
